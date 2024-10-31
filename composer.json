@@ -1,0 +1,16 @@
+{
+    "name": "rohith016/e-commerce-stock-models",
+    "autoload": {
+      "psr-4": {
+        "EcommercePackage\\": "src/"
+      }
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "EcommercePackage\\EcommerceServiceProvider"
+        ]
+      }
+    }
+}
+  
