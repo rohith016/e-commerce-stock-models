@@ -1,6 +1,6 @@
 <?php
 
-namespace EcommercePackage;
+namespace Rohith\EcommercePackage;
 
 use Illuminate\Support\ServiceProvider;
 
