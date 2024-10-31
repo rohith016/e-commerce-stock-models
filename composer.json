@@ -1,16 +1,15 @@
 {
-    "name": "rohith016/e-commerce-stock-models",
-    "autoload": {
-      "psr-4": {
-        "Rohith\\EcommercePackage\\": "src/"
-      }
-    },
-    "extra": {
-      "laravel": {
-        "providers": [
-          "Rohith\\EcommercePackage\\EcommerceServiceProvider"
-        ]
-      }
+  "name": "rohith016/e-commerce-stock-models",
+  "autoload": {
+    "psr-4": {
+      "Rohith\\EcommercePackage\\": "src/"
     }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Rohith\\EcommercePackage\\EcommerceServiceProvider"
+      ]
+    }
+  }
 }
-  
