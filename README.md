@@ -18,6 +18,8 @@ composer require rohith016/e-commerce-stock-models
 
 composer require rohith016/e-commerce-stock-models:dev-main --dev
 
+composer require rohith016/e-commerce-stock-models:^1.0
+
 ```
 
 ### Step 2: Publish Resources
