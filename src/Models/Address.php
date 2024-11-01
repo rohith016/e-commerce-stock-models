@@ -21,7 +21,6 @@ class Address extends Model
         'city',
         'postal_code',
         'country',
-        'address_type',
         'is_default',
     ];
 }
