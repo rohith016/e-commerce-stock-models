@@ -19,4 +19,15 @@ class GiftCardUsage extends Model
         'used_amount',
         'used_at',
     ];
+
+
+    // relationship between gift_card_usage and gift_card
+    public function gift_card(){
+        return $this->belongsTo(GiftCard::class);
+    }
+
+    // relationship between gift_card_usage and order
+    public function order(){
+        return $this->belongsTo(Order::class);
+    }
 }

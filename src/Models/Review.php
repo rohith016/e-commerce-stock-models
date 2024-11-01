@@ -20,4 +20,15 @@ class Review extends Model
         'title',
         'body',
     ];
+
+    // relationship between review and product
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
+
+
+    // relationship between review and user
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

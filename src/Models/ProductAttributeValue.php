@@ -17,4 +17,9 @@ class ProductAttributeValue extends Model
         'attribute_id',
         'value', // cotton, polyester, nylon, 100X100 CM etc.
     ];
+
+    // relationship between attribute and value
+    public function attribute(){
+        return $this->belongsTo(ProductAttribute::class);
+    }
 }

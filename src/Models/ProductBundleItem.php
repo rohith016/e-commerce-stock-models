@@ -18,4 +18,15 @@ class ProductBundleItem extends Model
         'product_id',
         'quantity'
     ];
+
+    // relationship between bundle and item
+    public function bundle(){
+        return $this->belongsTo(ProductBundle::class);
+    }
+
+
+    // relationship between bundle and product
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
 }

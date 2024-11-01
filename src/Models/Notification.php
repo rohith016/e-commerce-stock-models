@@ -18,4 +18,9 @@ class Notification extends Model
         'message',
         'status',
     ];
+
+    // relationship between notification and user
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

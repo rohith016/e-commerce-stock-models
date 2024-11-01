@@ -19,4 +19,19 @@ class CouponUsage extends Model
         'order_id',
         'used_at'
     ];
+
+    // relationship between coupon and coupon usage
+    public function coupon(){
+        return $this->belongsTo(Coupon::class);
+    }
+
+    // relationship between coupon usage and user
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    // relationship between coupon usage and order
+    public function order(){
+        return $this->belongsTo(Order::class);
+    }
 }

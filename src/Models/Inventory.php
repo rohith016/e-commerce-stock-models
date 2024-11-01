@@ -19,4 +19,9 @@ class Inventory extends Model
         'quantity',
         'last_updated_at',
     ];
+
+    // relationship between inventory and product
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
 }

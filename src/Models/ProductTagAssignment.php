@@ -18,4 +18,14 @@ class ProductTagAssignment extends Model
         'tag_id',
         'assigned_at',
     ];
+
+    // relationship between product tag assignment and product
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
+
+    // relationship between product tag assignment and tag
+    public function tag(){
+        return $this->belongsTo(ProductTag::class);
+    }
 }

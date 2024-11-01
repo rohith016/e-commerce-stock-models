@@ -20,4 +20,14 @@ class SubscriptionUser extends Model
         'end_date', 
         'status', // active, cancelled, etc.
     ];
+
+    // relationship between subscription user and user
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    // relationship between subscription user and subscription
+    public function subscription(){
+        return $this->belongsTo(Subscription::class);
+    }
 }

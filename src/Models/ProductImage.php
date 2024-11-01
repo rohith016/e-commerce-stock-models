@@ -18,4 +18,9 @@ class ProductImage extends Model
         'image_url',
         'alt_text',
     ];
+
+    // relationship between product and image
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
 }

@@ -20,4 +20,9 @@ class ProductAnalytic extends Model
         'purchased_count',
         'last_viewed_at',
     ];
+
+    // relationship between product and analytic
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
 }

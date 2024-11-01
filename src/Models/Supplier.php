@@ -19,4 +19,9 @@ class Supplier extends Model
         'email',
         'address_id',
     ];
+
+    // relationship between supplier and address
+    public function address(){
+        return $this->belongsTo(Address::class);
+    }
 }

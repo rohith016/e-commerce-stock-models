@@ -21,4 +21,9 @@ class Payment extends Model
         'transaction_id',
         'payment_at',
     ];
+
+    // relationship between payment and order
+    public function order(){
+        return $this->belongsTo(Order::class);
+    }
 }

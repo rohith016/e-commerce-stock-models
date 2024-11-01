@@ -18,4 +18,15 @@ class ReviewResponse extends Model
         'user_id',
         'response_body'
     ];
+
+    // relationship between review_response and review
+    public function review(){
+        return $this->belongsTo(Review::class);
+    }
+
+
+    // relationship between review_response and user
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

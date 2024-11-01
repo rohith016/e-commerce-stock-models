@@ -17,4 +17,15 @@ class PromotionProduct extends Model
         'promotion_id',
         'product_id'
     ];
+
+    // relationship between promotion product and promotion
+    public function promotion(){
+        return $this->belongsTo(Promotion::class);
+    }
+
+
+    // relationship between promotion product and product
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
 }

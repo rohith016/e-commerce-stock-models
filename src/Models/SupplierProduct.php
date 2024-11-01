@@ -19,4 +19,14 @@ class SupplierProduct extends Model
         'cost_price',
         'lead_time',
     ];
+
+    // relationship between supplier product and product
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
+
+    // relationship between supplier product and supplier
+    public function supplier(){
+        return $this->belongsTo(Supplier::class);
+    }
 }

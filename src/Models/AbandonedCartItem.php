@@ -4,7 +4,8 @@ namespace App\Models;
  
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
- 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
 class AabandonedCartItem extends Model
 {
     use SoftDeletes;
@@ -19,4 +20,16 @@ class AabandonedCartItem extends Model
         'quantity',
         'price_at_abandonment',
     ];
+
+    // relation ship between AabandonedCartItem and Product
+    public function product(): BelongsTo 
+    {
+        return $this->belongsTo(Product::class);
+    }
+
+    // relation ship between AabandonedCartItem and AbandonedCart
+    public function abandonedCart(): BelongsTo
+    {
+        return $this->belongsTo(AbandonedCart::class);
+    }
 }

@@ -21,4 +21,15 @@ class Shipment extends Model
         'shipping_date',
         'delivery_date',
     ];
+
+    // relationship between shipment and order
+    public function order(){
+        return $this->belongsTo(Order::class);
+    }
+
+
+    // relationship between shipment and ship carrier
+    public function ship_carrier(){
+        return $this->belongsTo(ShipCarrier::class);
+    }
 }

@@ -20,4 +20,9 @@ class Order extends Model
         'total_amount',
         'status'
     ];
+
+    // relationship between order and user
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

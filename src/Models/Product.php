@@ -21,4 +21,9 @@ class Product extends Model
         'category_id',
         'status',
     ];
+
+    // relationship between product and category
+    public function category(){
+        return $this->belongsTo(Category::class);
+    }
 }

@@ -20,4 +20,9 @@ class Discount extends Model
         'valid_from_at',
         'valid_to_at',
     ];
+
+    // relationship between discount and product
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
 }

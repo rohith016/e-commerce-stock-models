@@ -17,4 +17,14 @@ class WishlistItem extends Model
         'wishlist_id',
         'product_id',
     ];
+
+    // relationship with wishlist item and wishlist
+    public function wishlist(){
+        return $this->belongsTo(Wishlist::class);
+    }
+
+    // relationship with wishlist item and product
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
 }

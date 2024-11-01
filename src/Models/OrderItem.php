@@ -19,4 +19,15 @@ class OrderItem extends Model
         'quantity',
         'price'
     ];
+
+
+    // relationship between order item and order
+    public function order(){
+        return $this->belongsTo(Order::class);
+    }
+
+    // relationship between order item and product
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
 }

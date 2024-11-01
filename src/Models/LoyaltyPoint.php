@@ -19,4 +19,9 @@ class LoyaltyPoint extends Model
         'earned_at',
         'expired_at',
     ];
+
+    // relationship between loyalty_point and user
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

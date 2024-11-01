@@ -18,4 +18,14 @@ class CustomerSupportTicketResponse extends Model
         'user_id',
         'response_text',
     ];
+
+    // relationship between customer support ticket and user
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    // relationship between customer support ticket and customer support ticket response
+    public function ticket(){
+        return $this->belongsTo(CustomerSupportTicket::class);
+    }
 }

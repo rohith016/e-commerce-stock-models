@@ -18,4 +18,14 @@ class ProductAttributeAssignment extends Model
         'attribute_value_id',
         'assigned_at', // date when attribute was assigned to product
     ];
+
+    // relationship between product and attribute
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
+
+    // relationship between attribute and value
+    public function attributeValue(){
+        return $this->belongsTo(ProductAttribute::class);
+    }
 }

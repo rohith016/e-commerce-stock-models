@@ -20,4 +20,9 @@ class Refund extends Model
         'status',
         'processed_at'
     ];
+
+    // relationship between refund and order
+    public function order(){
+        return $this->belongsTo(Order::class);
+    }
 }

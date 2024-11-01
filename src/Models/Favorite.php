@@ -17,4 +17,15 @@ class Favorite extends Model
         'user_id',
         'product_id',
     ];
+
+
+    // relationship between favorite and user
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    // relationship between favorite and product
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
 }

@@ -17,4 +17,10 @@ class AuditLog extends Model
         'user_id',
         'action',
     ];
+
+    // relation ship between AuditLog and User
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

@@ -23,4 +23,10 @@ class Address extends Model
         'country',
         'is_default',
     ];
+
+    // relation ship between Address and User
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

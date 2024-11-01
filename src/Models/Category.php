@@ -17,4 +17,9 @@ class Category extends Model
         'name',
         'parent_category_id'
     ];
+
+    // relation ship between Category and Category
+    public function parentCategory(){
+        return $this->belongsTo(Category::class);
+    }
 }

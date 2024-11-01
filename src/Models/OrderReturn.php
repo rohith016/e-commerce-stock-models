@@ -21,4 +21,16 @@ class OrderReturn extends Model
         'requested_at',
         'resolved_at',
     ];
+
+
+    // relationship between order return and order
+    public function order(){
+        return $this->belongsTo(Order::class);
+    }
+
+
+    // relationship between order return and product
+    public function product(){
+        return $this->belongsTo(Product::class);
+    }
 }

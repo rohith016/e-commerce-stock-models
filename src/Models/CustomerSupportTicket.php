@@ -19,4 +19,10 @@ class CustomerSupportTicket extends Model
         'description',
         'status', // 0 - open, 1 - closed, 2 - pending
     ];
+
+
+    // relationship between customer support ticket and user
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
