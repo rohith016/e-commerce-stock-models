@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('order_id');
             $table->float('amount');
             $table->text('reason');
-            // status can beinitiated, processing, completed, cancelled, refunded, refunded_partially, pending_refund, partially_refunded, partially_refunded_partially, partially_refunded_completed
+            // status can be initiated, processing, completed, cancelled, refunded, refunded_partially, pending_refund, partially_refunded, partially_refunded_partially, partially_refunded_completed
             $table->string('status');
             $table->timestamp('processed_at')->nullable();
             $table->timestamps();
