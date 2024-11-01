@@ -11,6 +11,8 @@ Seeders and factories to populate tables with dummy data for testing and develop
 ### Step 1: Require the Package
 Install the package via Composer:
 
+
+
 ```bash
 composer require rohith016/e-commerce-stock-models
 
