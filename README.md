@@ -13,6 +13,9 @@ Install the package via Composer:
 
 ```bash
 composer require rohith016/e-commerce-stock-models
+
+composer require rohith016/e-commerce-stock-models:dev-main --dev
+
 ```
 
 ### Step 2: Publish Resources
