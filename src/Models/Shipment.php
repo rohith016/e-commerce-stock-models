@@ -4,7 +4,9 @@ namespace App\Models;
  
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
- 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
 class Shipment extends Model
 {
     use SoftDeletes;
@@ -16,7 +18,7 @@ class Shipment extends Model
     protected $fillable = [
         'order_id',
         'tracking_number',
-        'carrier_id',
+        'ship_carrier_id',
         'status',
         'shipping_date',
         'delivery_date',
@@ -30,6 +32,6 @@ class Shipment extends Model
 
     // relationship between shipment and ship carrier
     public function ship_carrier(){
-        return $this->belongsTo(ShipCarrier::class);
+        return $this->belongsTo(ShipCarrier::class, 'ship_carrier_id');
     }
 }

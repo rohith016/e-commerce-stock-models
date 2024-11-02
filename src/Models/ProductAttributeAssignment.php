@@ -4,7 +4,9 @@ namespace App\Models;
  
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
- 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
 class ProductAttributeAssignment extends Model
 {
     use SoftDeletes;
@@ -26,6 +28,6 @@ class ProductAttributeAssignment extends Model
 
     // relationship between attribute and value
     public function attributeValue(){
-        return $this->belongsTo(ProductAttribute::class);
+        return $this->belongsTo(ProductAttributeValue::class, 'attribute_value_id');
     }
 }

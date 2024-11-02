@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class AabandonedCartItem extends Model
 {
@@ -30,6 +31,6 @@ class AabandonedCartItem extends Model
     // relation ship between AabandonedCartItem and AbandonedCart
     public function abandonedCart(): BelongsTo
     {
-        return $this->belongsTo(AbandonedCart::class);
+        return $this->belongsTo(AbandonedCart::class, 'abandoned_cart_id');
     }
 }

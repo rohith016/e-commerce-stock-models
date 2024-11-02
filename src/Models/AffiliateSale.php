@@ -4,7 +4,9 @@ namespace App\Models;
  
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
- 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
 class AffiliateSale extends Model
 {
     use SoftDeletes;
@@ -22,7 +24,7 @@ class AffiliateSale extends Model
 
     // relationship between affiliate sale and affiliate partner
     public function affiliatePartner(){
-        return $this->belongsTo(AffiliatePartner::class);
+        return $this->belongsTo(AffiliatePartner::class, 'affilate_partner_id');
     }
 
     // relationship between affiliate sale and order

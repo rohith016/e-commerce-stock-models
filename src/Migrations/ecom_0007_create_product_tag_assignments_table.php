@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('product_tag_assignments', function (Blueprint $table) {
             $table->id();
             $table->foreignId('product_id');
-            $table->integer('tag_id');
+            $table->integer('product_tag_id');
             $table->timestamp('assigned_at');
             $table->timestamps();
             $table->softDeletes();

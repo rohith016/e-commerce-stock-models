@@ -4,7 +4,9 @@ namespace App\Models;
  
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
- 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
 class CustomerSupportTicketResponse extends Model
 {
     use SoftDeletes;
@@ -26,6 +28,6 @@ class CustomerSupportTicketResponse extends Model
 
     // relationship between customer support ticket and customer support ticket response
     public function ticket(){
-        return $this->belongsTo(CustomerSupportTicket::class);
+        return $this->belongsTo(CustomerSupportTicket::class, 'ticket_id');
     }
 }

@@ -4,7 +4,9 @@ namespace App\Models;
  
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
- 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
 class ProductTagAssignment extends Model
 {
     use SoftDeletes;
@@ -15,7 +17,7 @@ class ProductTagAssignment extends Model
      */
     protected $fillable = [
         'product_id',
-        'tag_id',
+        'product_tag_id',
         'assigned_at',
     ];
 
@@ -26,6 +28,6 @@ class ProductTagAssignment extends Model
 
     // relationship between product tag assignment and tag
     public function tag(){
-        return $this->belongsTo(ProductTag::class);
+        return $this->belongsTo(ProductTag::class, 'product_tag_id');
     }
 }

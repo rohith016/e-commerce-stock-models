@@ -4,7 +4,9 @@ namespace App\Models;
  
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
- 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
 class WishlistItem extends Model
 {
     use SoftDeletes;
@@ -17,14 +19,22 @@ class WishlistItem extends Model
         'wishlist_id',
         'product_id',
     ];
-
-    // relationship with wishlist item and wishlist
-    public function wishlist(){
+    /**
+     * relationship with wishlist item and wishlist
+     *
+     * @return BelongsTo
+     */
+    public function wishlist(): BelongsTo
+    {
         return $this->belongsTo(Wishlist::class);
     }
-
-    // relationship with wishlist item and product
-    public function product(){
+    /**
+     * relationship with wishlist item and product
+     *
+     * @return BelongsTo
+     */
+    public function product(): BelongsTo
+    {
         return $this->belongsTo(Product::class);
     }
 }

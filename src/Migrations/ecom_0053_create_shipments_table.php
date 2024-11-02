@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('order_id');
             $table->string('tracking_number');
-            $table->foreignId('carrier_id');
+            $table->foreignId('ship_carrier_id');
             $table->string('status');
             $table->timestamp('shipping_date');
             $table->timestamp('delivery_date');

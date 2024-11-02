@@ -4,7 +4,9 @@ namespace App\Models;
  
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
- 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
 class Category extends Model
 {
     use SoftDeletes;
@@ -20,6 +22,6 @@ class Category extends Model
 
     // relation ship between Category and Category
     public function parentCategory(){
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class, 'parent_category_id');
     }
 }
