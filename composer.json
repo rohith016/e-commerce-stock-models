@@ -1,5 +1,17 @@
 {
   "name": "rohith016/e-commerce-stock-models",
+  "license": "MIT",
+  "description": "e-commerce package for stock management and stock allocation",
+  "type": "library",
+  "authors": [
+        {
+            "name": "Rohith Ramachandran",
+            "email": "rohithdpr016@gmail.com"
+        }
+  ],
+  "require": {
+    "php": "^7.2"
+  },
   "autoload": {
     "psr-4": {
       "Rohith\\EcommercePackage\\": "src/"
